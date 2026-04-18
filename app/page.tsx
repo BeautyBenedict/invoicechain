@@ -232,7 +232,7 @@ export default function InvoiceDApp() {
       const ok = await ensureNetwork(eth);
       if (!ok) { setConnectLoading(false); return; }
 
-      const prov  = new ethers.BrowserProvider(rawEth as Parameters<typeof ethers.BrowserProvider>[0]);
+      const prov  = new ethers.BrowserProvider(rawEth as never);
       const signer = await prov.getSigner();
       const addr   = await signer.getAddress();
       const ctr    = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
@@ -269,7 +269,7 @@ export default function InvoiceDApp() {
         return;
       }
       try {
-        const prov  = new ethers.BrowserProvider(rawEth as Parameters<typeof ethers.BrowserProvider>[0]);
+        const prov  = new ethers.BrowserProvider(rawEth as never);
         const signer = await prov.getSigner();
         const addr   = await signer.getAddress();
         const ctr    = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
