@@ -762,7 +762,7 @@ export default function InvoiceDApp() {
                   <p className="text-[12px] font-medium text-blue-300 mb-0.5">You are on Arc Testnet</p>
                   <p className="text-[11px] text-blue-400/60 leading-relaxed">
                     Amounts are in <strong>USDC</strong> — Arc Testnet&apos;s native token.
-                    This is test USDC — no real money. The same contract works on mainnet with real USDC.
+                    This is test USDC — no real money is involved.
                   </p>
                 </div>
               </div>
